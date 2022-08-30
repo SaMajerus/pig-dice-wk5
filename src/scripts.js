@@ -1,4 +1,16 @@
-/*   Business Logic   */
+export function Player(name, variable) {
+  this.name = name;
+  this.currentTotal = [];
+  this.totalPts = variable;
+}
+
+// Player.prototype.diceRoll = function() {
+//   return "testing";
+// }; 
+
+
+
+/*   (Orig) Business Logic   */
 Player.prototype.diceRoll = function() {
   const min = Math.ceil(1);  
   let number = Math.floor((Math.random() * 6) + min);  //Both max and min are inclusive. [See last example on MDN's 'Math.random()' page for reference. -SM] 
@@ -32,11 +44,11 @@ Player.prototype.sum = function() {  //(Local-var 'totalPoints' modified to 'tot
   return this.totalPts;
 }
 
-function Player(name, variable) {
-  this.name = name;
-  this.currentTotal = [];
-  this.totalPts = variable; //Initializes this field to start at 0. 
-} 
+// function Player(name, variable) {
+//   this.name = name;
+//   this.currentTotal = [];
+//   this.totalPts = variable; //Initializes this field to start at 0. 
+// } 
 
 function Game(player1, player2) {
   this.firstPlayer = player1
@@ -66,7 +78,7 @@ Player.prototype.winner = function() {
 
 let game;
 
-/*   UI Logic   */
+/*   (Orig) UI Logic   */
 
 function handleGameStart(event) {
   event.preventDefault();
