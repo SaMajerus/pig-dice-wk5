@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/scripts.js"></script> 
+  <title>Pig Dice Game</title> 
+</head>
+
+<body>
+  <h1 id="pigDice">Play Pig Dice!</h1><br>
+    <div id="title">
+      <form id="nameInput">
+        <label for="player1">Player 1 name:</label><br> 
+        <input type = "text" name="player1" id="player1"><br> 
+        <label for="player2">Player 2 name:</label><br>
+        <input type = "text" name="player2" id="player2"><br>
+        <button type="submit" id="play">Click here to start!</button><br><br><br>
+      </form>
+    </div>
+  <div id="game" class="hidden">
+    <form id="gameboard">
+      <h2> Player <span id="player1">1</span> </h2><br>
+      <h3> Total Points: <span id="totalpts1"></span> </h3><br>
+      <h3> Current Points: <span id="currpts1"></span> </h3><br>
+      <div class="hidden" id="p1Buttons">
+        <button type="button" id="roll1">Roll the Dice!</button><br>
+        <button type="button" id="hold1">STOP!</button> <br><br><br><br>
+      </div>
+      <h2> Player <span id="player2"></span> </h2><br>
+      <h3> Total Points: <span id="totalpts2"></span> </h3><br>
+      <h3> Current Points: <span id="currpts2"></span> </h3><br>
+      <div class="hidden" id="p2Buttons">
+        <button type="button" id="roll2">Roll the Dice!</button>
+        <button type="button" id="hold2">STOP!</button> <br><br><br><br>
+      </div>
+    </form>
+  </div>
+  <div id="youWin" class="hidden">
+    <h1>Congratulations <span id="winner"></span>, you win!</h1>
+    <button type="reset" id="reset">reset</button>
+  </div>
+  
+</body>
+
+</html>
