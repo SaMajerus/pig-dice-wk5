@@ -20,5 +20,5 @@ describe('Player', () => {
     expect(typeof player.currentTotal === undefined);
     expect(player.name.includes("herbert"));
     expect(player.totalPts === 0);
-  })
-})
+  });
+});
