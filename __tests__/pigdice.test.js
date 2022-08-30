@@ -13,12 +13,24 @@ import { Player } from "./../src/scripts.js";
 
 describe('Player', () => {
 
+  let name;
+  let variable;
+  let player;
+
+  beforeEach(() => {
+    name = "herbert";
+    variable = 0;
+    player = new Player(name, variable);
+  });
+
   test('should take two arguments and have three key:value pairs', () => {
-    const name = "herbert";
-    const variable = 0;
-    const player = new Player(name, variable);
     expect(typeof player.currentTotal === undefined);
     expect(player.name.includes("herbert"));
     expect(player.totalPts === 0);
   });
+
+  test ('should take two intergers and return a random number between 1-6', () => {
+    expect(player.diceRoll > 0 || player.diceRoll <= 6);
+  });
+
 });
